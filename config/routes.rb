@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  root 'prototypes#index'
+  root 'messages#index'
 end
