@@ -1,1 +1,53 @@
-hello world!
+.chat
+  = render 'sidebar'
+  .main
+    .header
+      .left-header
+        %p.left-header__name
+          Sample Group
+        %ul.left-header__members
+          Member:
+          %li.member
+            Sample Member
+          %li.member
+            Sample Member
+          %li.member
+            Sample Member
+      .right-header
+        = link_to 'Edit'
+    .messages
+      .message
+        .upper-message
+          .upper-message__user-name
+            User Name
+          .upper-message__date
+            2018/03/06 00:12:34
+        .lower-message
+          .lower-message__content
+            Test Message
+      .message
+        .upper-message
+          .upper-message__user-name
+            User Name
+          .upper-message__date
+            2018/03/06 00:12:34
+        .lower-message
+          .lower-message__content
+            Test Message
+      .message
+        .upper-message
+          .upper-message__user-name
+            User Name
+          .upper-message__date
+            2018/03/06 00:12:34
+        .lower-message
+          .lower-message__content
+            Test Message
+    .form
+      %form
+        = text_area :messages, :message, :class => 'form__message', :placeholder => 'type a message'
+        .form__image-mask
+          %label.form__image
+            = fa_icon 'picture-o', class: 'icon'
+            %input.form__hidden{type: 'file'}
+        %input.form__submit{type: 'submit',value: 'Send'}
