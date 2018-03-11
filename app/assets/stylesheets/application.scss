@@ -3,11 +3,14 @@
 
 // Config
 @import "./config/colors";
-@import "./config/font-size.scss";
+@import "./config/font-size";
 
 // Gem
 @import "./font-awesome";
 
 // Common
+@import "./common/sidebar";
 @import "./common/messages";
-@import "./common/sidebar.scss";
+@import "./common/user";
+@import "./common/flash";
+
