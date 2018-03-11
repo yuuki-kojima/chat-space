@@ -4,7 +4,7 @@
       = current_user.name
     %ul.side-header__lists
       %li.list
-        = link_to do
+        = link_to new_groups_path do
           = fa_icon 'pencil-square-o', class: 'icon'
       %li.list
         = link_to edit_users_path(current_user) do
