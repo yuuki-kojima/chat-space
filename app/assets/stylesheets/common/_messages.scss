@@ -43,6 +43,7 @@
     .messages {
       background-color: $messages_color;
       height: calc(100vh - 100px - 90px);
+      overflow: auto;
       .message {
         padding: 46px 40px 0;
         .upper-message {
@@ -63,6 +64,9 @@
           &__content {
             font-size: $messages_content;
             color: $messages_content_color;
+          }
+          &__image {
+            max-width: 500px;
           }
         }
       }
