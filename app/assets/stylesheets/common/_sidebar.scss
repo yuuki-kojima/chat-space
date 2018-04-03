@@ -3,6 +3,7 @@
   color: $white;
   float: left;
   .side-header {
+    box-sizing: border-box;
     height: 100px;
     background-color: $sidebar_header_color;
     line-height: 100px;
