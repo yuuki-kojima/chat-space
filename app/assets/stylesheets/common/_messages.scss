@@ -3,6 +3,7 @@
     width: calc(100% - 300px);
     float: right;
     .header {
+      box-sizing: border-box;
       height: 100px;
       background-color: $header_color;
       border-bottom: 1px solid #eeeeee;
@@ -42,8 +43,8 @@
     }
     .messages {
       background-color: $messages_color;
-      height: calc(100vh - 100px - 90px);
       overflow: auto;
+      height: calc(100vh - 100px - 90px);
       .message {
         padding: 46px 40px 0;
         .upper-message {
