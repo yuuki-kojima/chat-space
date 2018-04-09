@@ -12,7 +12,6 @@ $(function(){
   obj.val('');
   obj.on("keyup", function() {
     var input = obj.val();
-    console.log(input);
     if(input != ''){
       $.ajax({
         type: 'GET',
