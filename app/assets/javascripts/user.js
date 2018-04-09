@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(function(){
 
   function buildHTML(user){
     var html = `<div class="chat-group-user clearfix">
