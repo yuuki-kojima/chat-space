@@ -27,6 +27,7 @@
     }
   }
   .groups {
+    overflow: auto;
     height: calc(100vh - 100px);
     background-color: $sidebar_groups_color;
     padding: 0 20px;
