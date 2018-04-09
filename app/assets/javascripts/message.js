@@ -5,7 +5,7 @@ $(document).on('turbolinks:load', function() {
     }else{
       var imageHtml = '';
     }
-    var html = `<div class="message">
+    var html = `<div class="message" data-message-id="${message.id}">
                   <div class="upper-message">
                     <div class="upper-message__user-name">
                     ${message.user_name}
@@ -53,4 +53,33 @@ $(document).on('turbolinks:load', function() {
       alert('メッセージを送信できませんでした。');
     })
   })
+
+  var interval = setInterval(function() {
+    var url = window.location.pathname;
+    if (url.match(/\/groups\/\d+\/messages/)) {
+      var id = $('.message').last().data('messageId');
+      $.ajax({
+        url: url,
+        type: 'GET',
+        data: {message_id: id},
+        dataType:'json'
+      })
+      .done(function(data) {
+        if(data.lenght !== 0){
+          var html = '';
+          data.forEach(function(message) {
+            html = buildHTML(message);
+            $(html).appendTo('.messages');
+            autoScroll();
+          });
+        }
+      })
+      .fail(function(data) {
+        alert('自動更新に失敗しました');
+      });
+    } else {
+    clearInterval(interval);
+    }
+  } , 5000 );
+
 })

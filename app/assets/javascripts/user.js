@@ -35,7 +35,6 @@ $(function(){
     }else{
       $("#user-search-result").empty();
     }
-
   });
 
   $(document).on("click", ".user-search-add", function(){
