@@ -57,18 +57,17 @@ $(document).on('turbolinks:load', function() {
   var interval = setInterval(function() {
     var url = window.location.pathname;
     if (url.match(/\/groups\/\d+\/messages/)) {
-      var id = $('.message').last().data('messageId');
+      var message_id = $('.message').last().data('messageId');
       $.ajax({
         url: url,
         type: 'GET',
-        data: {message_id: id},
+        data: {id: message_id},
         dataType:'json'
       })
       .done(function(data) {
         if(data.lenght !== 0){
-          var html = '';
           data.forEach(function(message) {
-            html = buildHTML(message);
+            var html = buildHTML(message);
             $(html).appendTo('.messages');
             autoScroll();
           });
