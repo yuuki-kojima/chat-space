@@ -8,7 +8,7 @@ stderr_path "#{app_path}/log/unicorn.stderr.log"
 stdout_path "#{app_path}/log/unicorn.stdout.log"
 
 # listen 3000
-listen "#{app_path}/tmp/unicorn.sock"
+listen "#{app_path}/tmp/sockets/unicorn.sock"
 timeout 60
 
 preload_app true
