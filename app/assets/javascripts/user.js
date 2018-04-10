@@ -12,7 +12,6 @@ $(function(){
   obj.val('');
   obj.on("keyup", function() {
     var input = obj.val();
-    console.log(input);
     if(input != ''){
       $.ajax({
         type: 'GET',
@@ -35,7 +34,6 @@ $(function(){
     }else{
       $("#user-search-result").empty();
     }
-
   });
 
   $(document).on("click", ".user-search-add", function(){
