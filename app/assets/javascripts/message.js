@@ -58,6 +58,7 @@ $(document).on('turbolinks:load', function() {
     var url = window.location.pathname;
     if (url.match(/\/groups\/\d+\/messages/)) {
       var message_id = $('.message').last().data('messageId');
+      console.log(message_id);
       $.ajax({
         url: url,
         type: 'GET',
